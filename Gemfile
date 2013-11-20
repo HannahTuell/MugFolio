@@ -1,6 +1,7 @@
 #Ashley's Edit 2  
 source 'http://rubygems.org'
 
+#Veric Edit 2
 gem 'rails', '3.1.0'
 
 # Bundle edge Rails instead:
