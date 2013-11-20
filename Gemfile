@@ -1,4 +1,4 @@
-#Ashley's Edit 2  
+#Ashley's Edit 2       Hello  
 source 'http://rubygems.org'
 
 gem 'rails', '3.1.0'
