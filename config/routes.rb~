@@ -1,10 +1,6 @@
 MugFolio::Application.routes.draw do
-  resources :wallposts
-
-  resources :users
-
-  resources :login
-  root :to => redirect('/login')
+  resources :movies
+  root :to => redirect('/movies')
 
   
   # Initialized comments:
