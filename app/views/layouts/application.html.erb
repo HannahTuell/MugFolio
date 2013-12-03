@@ -11,10 +11,16 @@
     <%= csrf_meta_tags %>
   </head>
   <body>
+		<!-- renders the navigation bar (signed in vs. not signed in) -->
     <%= render 'layouts/header' %>
+
+		<% if notice %>
+			<p class="alert alert-notice"><%= notice %></p>
+	  <% end %>
+		<% if notice %>
+			<p class="alert alert-error"><%= alert %></p>
+		<% end %>
     <%= yield %>
     <%= javascript_include_tag "application" %>
-		<p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
   </body>
 </html>

@@ -12,6 +12,12 @@
   </head>
   <body>
     <%= render 'layouts/header' %>
+		<% if notice %>
+			<p class="alert alert-notice"><%= notice %></p>
+	  <% end %>
+		<% if notice %>
+			<p class="alert alert-error"><%= alert %></p>
+		<% end %>
     <%= yield %>
     <%= javascript_include_tag "application" %>
   </body>
