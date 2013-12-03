@@ -1,14 +1,4 @@
 MugFolio::Application.routes.draw do
-  resources :wallposts
-
-  resources :users
-
-  resources :login
-  root :to => redirect('/login')
-
-  
-  # Initialized comments:
-  #
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

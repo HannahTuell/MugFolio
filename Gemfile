@@ -42,11 +42,5 @@ gem 'jquery-rails'
 # Deploy with Capistrano
 # gem 'capistrano'
 
-# pastebin from book, chapter 4
-# use Haml for templates
+# To use debugger
 gem 'haml'
-
-# use Ruby debugger
-group :development, :test do
-  gem 'debugger'
-end
