@@ -48,3 +48,7 @@ gem 'haml'
 gem 'compass'
 # To install foundation gem
 gem 'foundation-rails'
+
+# To install the Devise authentication gem
+gem 'devise'
+

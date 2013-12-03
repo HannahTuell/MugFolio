@@ -52,3 +52,6 @@ gem 'foundation-rails'
 # To install the Devise authentication gem
 gem 'devise'
 
+# To install the socialization gem for relationships b/n users
+gem 'socialization'
+
