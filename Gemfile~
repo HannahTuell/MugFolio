@@ -1,4 +1,4 @@
-#Ashley's Edit Hello  
+#Ashley's Edit with hello 
 
 source 'http://rubygems.org'
 
@@ -44,3 +44,6 @@ gem 'jquery-rails'
 
 # To use debugger
 gem 'haml'
+
+# To install foundation gem
+gem 'foundation-rails'
