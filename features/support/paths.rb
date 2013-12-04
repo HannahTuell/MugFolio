@@ -15,6 +15,7 @@ module NavigationHelpers
 
     when /^the (RottenPotatoes )?home\s?page$/ then '/movies'
     when /^the movies page$/ then '/movies'
+    #when /^go to register$/ then '/users/sign_in'
     when /^the Sign In page$/ then'/users/sign_in'
     when /^the Sign Out page$/ then '/users/sign_out'
     when /^Sign Up page$/ then '/users/sign_up'

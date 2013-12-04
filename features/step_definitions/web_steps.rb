@@ -54,8 +54,8 @@ When /^(?:|I )press "([^"]*)"$/ do |button|
 end
 
 When /^(?:|I )follow "([^"]*)"$/ do |link|
-  #click_link(link)
-  %{I follow (button)}
+  click_link(link)
+  #%{I follow (button)}
 end
 
 When /^(?:|I )fill in "([^"]*)" with "([^"]*)"$/ do |field, value|
