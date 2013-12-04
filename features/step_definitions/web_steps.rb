@@ -113,7 +113,6 @@ end
 
 Then /^(?:|I )should see \/([^\/]*)\/$/ do |regexp|
   regexp = Regexp.new(regexp)
-
   if page.respond_to? :should
     page.should have_xpath('//*', :text => regexp)
   else
@@ -122,7 +121,7 @@ Then /^(?:|I )should see \/([^\/]*)\/$/ do |regexp|
 end
 
 Then /^(?:|I )should not see "([^"]*)"$/ do |text|
-  if page.respond_to? :should
+	if page.respond_to? :should
     page.should have_no_content(text)
   else
     assert page.has_no_content?(text)
@@ -252,4 +251,28 @@ end
 
 Then /^show me the page$/ do
   save_and_open_page
+end
+
+When(/^I sign out$/) do
+	click_link('Sign Out')
+end
+
+When(/^I click on 'View Profile'$/) do
+	click_link('View Profile')
+end
+
+Given(/^I have an account$/) do
+	visit path_to('the Sign Up page')
+	find_by_id(:user_email).set('testemail@test.com')
+	find_by_id(:user_password).set('testpassword')
+	find_by_id(:user_password_confirmation).set('testpassword')
+	click_button('Sign up')
+	click_link('Sign Out')
+end
+
+Given(/^I am signed in$/) do
+	visit path_to('the Sign In page')
+	find_by_id(:user_email).set('testemail@test.com')
+	find_by_id(:user_password).set('testpassword')
+	click_button('Sign in')
 end
