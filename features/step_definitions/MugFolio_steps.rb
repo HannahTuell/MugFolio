@@ -6,6 +6,11 @@ When(/^I click on 'View Profile'$/) do
 	click_link('View Profile')
 end
 
+When(/^I click on 'Forgot your password'$/) do
+	visit path_to('the Sign In page')
+	click_link('Forgot your password?')
+end
+
 Given(/^I have an account$/) do
 	visit path_to('the Sign Up page')
 	find_by_id(:user_email).set('testemail@test.com')
@@ -22,10 +27,16 @@ Given(/^I am signed in$/) do
 	click_button('Sign in')
 end
 
+Then(/^I press 'Send me reset password instructions'$/) do
+	click_button('Send me reset password instructions')
+end
+
+
 #When(/^I click on 'Sign Up'$/) do
 #       click_link('Sign Up')
 ########################################
 
+=begin
 def create_visitor
   @visitor ||= { :name => "Testy McUserton", :email => "example@example.com",
     :password => "changeme", :password_confirmation => "changeme" }
@@ -212,4 +223,4 @@ Then /^I should see my name$/ do
   create_user
   page.should have_content @user[:name]
 end
-
+=end
