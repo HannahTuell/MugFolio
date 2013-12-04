@@ -1,5 +1,6 @@
 class HomeController < ApplicationController
   def index
+    redirect('/users/sign_in')
   end
 
 end

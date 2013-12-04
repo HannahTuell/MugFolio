@@ -50,7 +50,7 @@ When /^(?:|I )go to (.+)$/ do |page_name|
 end
 
 When /^(?:|I )press "([^"]*)"$/ do |button|
-  %{I press (button)}
+  click_button(button)
 end
 
 When /^(?:|I )follow "([^"]*)"$/ do |link|
