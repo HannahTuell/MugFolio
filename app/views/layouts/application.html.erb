@@ -22,5 +22,11 @@
 		<% end %>
     <%= yield %>
     <%= javascript_include_tag "application" %>
+		<% if user_signed_in? %>
+			<h1>Newsfeed</h1>
+		<% else %>
+			<h1>Homepage</h1>
+		<% end %>
+		
   </body>
 </html>

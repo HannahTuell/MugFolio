@@ -52,3 +52,9 @@ gem 'foundation-rails'
 # To install the Devise authentication gem
 gem 'devise'
 
+# To install the socialization gem for relationships b/n users
+gem 'socialization'
+
+# To install factory girl for logging in
+gem "factory_girl_rails", "~> 4.0"
+

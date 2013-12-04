@@ -1,3 +1,31 @@
+When(/^I sign out$/) do
+	click_link('Sign Out')
+end
+
+When(/^I click on 'View Profile'$/) do
+	click_link('View Profile')
+end
+
+Given(/^I have an account$/) do
+	visit path_to('the Sign Up page')
+	find_by_id(:user_email).set('testemail@test.com')
+	find_by_id(:user_password).set('testpassword')
+	find_by_id(:user_password_confirmation).set('testpassword')
+	click_button('Sign up')
+	click_link('Sign Out')
+end
+
+Given(/^I am signed in$/) do
+	visit path_to('the Sign In page')
+	find_by_id(:user_email).set('testemail@test.com')
+	find_by_id(:user_password).set('testpassword')
+	click_button('Sign in')
+end
+
+#When(/^I click on 'Sign Up'$/) do
+#       click_link('Sign Up')
+########################################
+
 def create_visitor
   @visitor ||= { :name => "Testy McUserton", :email => "example@example.com",
     :password => "changeme", :password_confirmation => "changeme" }
@@ -72,9 +100,6 @@ When /^I sign in with valid credentials$/ do
   sign_in
 end
 
-When /^I sign out$/ do
-  visit '/users/sign_out'
-end
 
 When /^I sign up with valid user data$/ do
   create_visitor
@@ -187,3 +212,4 @@ Then /^I should see my name$/ do
   create_user
   page.should have_content @user[:name]
 end
+
