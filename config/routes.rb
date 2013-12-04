@@ -8,7 +8,10 @@ MugFolio::Application.routes.draw do
 	end
 
   get "home/index"
-  root :to => redirect('/users/sign_in')
+  root to: 'home#index'
+
+  #get "home/index"
+  #root :to => redirect('/users/sign_in')
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
