@@ -2,27 +2,6 @@ Feature: Sign in
   In order to get access to protected sections of the site
   A user
   Should be able to sign in
-
-#Scenario: User is not signed up
-#  Given I do not exist as a user
-#  When I sign in with valid credentials
-#  Then I see an invalid login message
-#  And I should be signed out
-
-#Scenario: User signs in successfully
-#  Given I exist as a user
-#  And I am not logged in
-#  When I sign in with valid credentials
-#  Then I see a successful sign in message
-#  When I return to the site
-#  Then I should be signed in
-
-#Scenario: User enters wrong email
-#  Given I exist as a user
-#  And I am not logged in
-#  When I sign in with a wrong email
-#  Then I see an invalid login message
-#  And I should be signed out
       
 Scenario: User tries signing up with a password that is too short
   Given I am on the Sign Up page
@@ -33,26 +12,20 @@ Scenario: User tries signing up with a password that is too short
   Then I should see a password too short error message
   And I should be signed out 
 
-Scenario:sign in to MugFolio  ## not passing
+Scenario:sign in to MugFolio 
   Given I am on the Sign In page
-  #When I fill in "user_email" with "testemail@test.com"
-  #And I fill in "user_password" with "testpassword"
-  #And I click button "Sign in"
   And I have an account
   And I am signed in
   Then I see a successful sign in message
-  #Then I am on the homepage
-  #And I should see "Homepage"
 
-Scenario: sign out of MugFolio ## passing
+Scenario: sign out of MugFolio 
   Given I have an account
   And I am signed in
   When I sign out
   Then I am on the homepage
   And I should see "Homepage"
 
-Scenario: sign up for MugFolio  ##passing
-  #When I click "Sign up"
+Scenario: sign up for MugFolio 
   Given I am on the Sign Up page
   When I fill in "user_email" with "testemail2@test.com"
   And I fill in "user_password" with "testpassword"
@@ -61,14 +34,17 @@ Scenario: sign up for MugFolio  ##passing
   Then I should be signed in
   Then I should see a successful sign up message
 
-#Scenario: Forgot your password?
-  #When I follow "Forgot your password?" 
-  #Then I am on forgot password page
-  #Then I should be on forgot password page
-  #When I fill in "user_email" with "testemail@test.com"
-  #Then I press "Send me reset password instructions"
+Scenario: Forgot your password?
+  Given I have an account
+  When I click on 'Forgot your password'
+  Then I am on forgot password page
+  Then I should be on forgot password page
+  When I fill in "user_email" with "testemail@test.com"
+  Then I press "Send me reset password instructions"
+  Then I am on the homepage
+  And I should see "Homepage"
 
-Scenario: view profile  ##passing
+Scenario: view profile 
   Given I have an account
   And I am signed in
   When I click on 'View Profile'

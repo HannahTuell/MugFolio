@@ -34,12 +34,15 @@ Scenario: sign up for MugFolio
   Then I should be signed in
   Then I should see a successful sign up message
 
-#Scenario: Forgot your password?
-  #When I follow "Forgot your password?" 
-  #Then I am on forgot password page
-  #Then I should be on forgot password page
-  #When I fill in "user_email" with "testemail@test.com"
-  #Then I press "Send me reset password instructions"
+Scenario: Forgot your password?
+  Given I have an account
+  When I click on 'Forgot your password'
+  Then I am on forgot password page
+  Then I should be on forgot password page
+  When I fill in "user_email" with "testemail@test.com"
+  Then I press "Send me reset password instructions"
+  Then I am on the homepage
+  And I should see "Homepage"
 
 Scenario: view profile 
   Given I have an account

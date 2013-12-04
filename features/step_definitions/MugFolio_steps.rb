@@ -6,6 +6,11 @@ When(/^I click on 'View Profile'$/) do
 	click_link('View Profile')
 end
 
+When(/^I click on 'Forgot your password'$/) do
+	visit path_to('the Sign In page')
+	click_link('Forgot your password?')
+end
+
 Given(/^I have an account$/) do
 	visit path_to('the Sign Up page')
 	find_by_id(:user_email).set('testemail@test.com')
@@ -26,6 +31,10 @@ When /^I click "Sign up"$/ do
   click_link("Sign up")
 end
 
+Then (/^I press 'Send me reset password instructions'$/) do
+  click_button('Send me reset password instructions')
+end
+
 Then /^I see a successful sign in message$/ do
   page.should have_content "Signed in successfully."
 end
@@ -44,13 +53,14 @@ Then /^I should see a password too short error message$/ do
   page.should have_content "Password is too short (minimum is 8 characters)"
 end
 
+Then /^I should see a successful sign up message$/ do
+  page.should have_content "Welcome! You have signed up successfully."
+end
+
 Then /^I should be signed out$/ do
   page.should have_content "Sign up"
   page.should have_content "Sign in"
   page.should_not have_content "Sign Out"
 end
 
-Then /^I should see a successful sign up message$/ do
-  page.should have_content "Welcome! You have signed up successfully."
-end
 
