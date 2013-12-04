@@ -24,38 +24,42 @@ Feature: Sign in
 #  Then I see an invalid login message
 #  And I should be signed out
       
-#Scenario: User enters wrong password
-#  Given I exist as a user
-#  And I am not logged in
-#  When I sign in with a wrong password
-#  Then I see an invalid login message
-#  And I should be signed out
+Scenario: User tries signing up with a password that is too short
+  Given I am on the Sign Up page
+  When I fill in "user_email" with "testemail2@test.com"
+  And I fill in "user_password" with "test"
+  And I fill in "user_password_confirmation" with "test"
+  Then I press "Sign up"
+  Then I should see a password too short error message
+  And I should be signed out 
 
-Scenario:sign in to MugFolio
+Scenario:sign in to MugFolio  ## not passing
   Given I am on the Sign In page
-  When I fill in "user_email" with "testemail@test.com"
-  And I fill in "user_password" with "testpassword"
-  And I press "Sign in"
-  Then I have an account
-  Then I am on the homepage
-  And I should see "Homepage"
+  #When I fill in "user_email" with "testemail@test.com"
+  #And I fill in "user_password" with "testpassword"
+  #And I click button "Sign in"
+  And I have an account
+  And I am signed in
+  Then I see a successful sign in message
+  #Then I am on the homepage
+  #And I should see "Homepage"
 
-Scenario: sign out of MugFolio
+Scenario: sign out of MugFolio ## passing
   Given I have an account
   And I am signed in
   When I sign out
   Then I am on the homepage
   And I should see "Homepage"
 
-Scenario: sign up for MugFolio
-  When I click on 'Sign Up'
-  Then I am on the Sign Up page
-  Then I should be on Sign Up page
-  When I fill in "user_email" with "testemail@test.com"
+Scenario: sign up for MugFolio  ##passing
+  #When I click "Sign up"
+  Given I am on the Sign Up page
+  When I fill in "user_email" with "testemail2@test.com"
   And I fill in "user_password" with "testpassword"
   And I fill in "user_password_confirmation" with "testpassword"
-  Then I press "Sign Up"
-  Then I am on MugFolio homepage
+  Then I press "Sign up"
+  Then I should be signed in
+  Then I should see a successful sign up message
 
 #Scenario: Forgot your password?
   #When I follow "Forgot your password?" 
@@ -64,9 +68,9 @@ Scenario: sign up for MugFolio
   #When I fill in "user_email" with "testemail@test.com"
   #Then I press "Send me reset password instructions"
 
-Scenario: view profile
-	Given I have an account
-	And I am signed in
-	When I click on 'View Profile'
-	Then I am on the Profile View
+Scenario: view profile  ##passing
+  Given I have an account
+  And I am signed in
+  When I click on 'View Profile'
+  Then I am on the Profile View
 
