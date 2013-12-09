@@ -1,2 +1,3 @@
-class Follow < Socialization::ActiveRecordStores::Follow
+class Follow < ActiveRecord::Base
+    acts_as_follow_store
 end

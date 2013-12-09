@@ -1,39 +1,24 @@
-<div class="fixed">
-	<nav class="top-bar" data-topbar>
-		<ul class="title-area">
-		  <li class="name">
-		    <h1><a href="#">MugFolio</a></h1>
-		  </li>
-		</ul>
+<nav class="top-bar">
+<ul class="title-area">
+    <li class="name">
+    <h1><a href="/">Rails book</a></h1>
+    </li>
+    <li class="toggle-topbar menu-icon">
 
-		<section class="top-bar-section">
-
-<% if user_signed_in? %>
-		  <!-- Right Nav Section -->
-		  <ul class="right">
-		  	<li><a href="#">Friends</a></li>
-		  	<li><a href="#">Settings</a></li>
-		  	<li><a href="/users/sign_out">Sign Out</a></li>
-		  </ul>
-
-		  <!-- Left Nav Section -->
-		  <ul class="left">
-				<!-- this will eventually link to user's profile -->
-		  	<li><a href="/users/show">View Profile</a></li>
-		  </ul>
-<!-- when there is no user signed in -->
-<% else %>
-		  <!-- Right Nav Section -->
-		  <ul class="right">
-		  	<li><a href="/users/sign_in">Sign In</a></li>
-		  	<li><a href="/users/sign_up">Sign Up</a></li>
-		  </ul>
-
-		  <!-- Left Nav Section -->
-		  <ul class="left">
-		  </ul>
+    <a href="#">Menu</a>
+    </li>
+</ul>
+<section class="top-bar-section">
+<%if user_signed_in? %>
+    <ul class="right">
+        <li><%= link_to 'Users', users_path %> </li>
+        <li class="divider"></li>
+        <li><%= link_to 'Profile', current_user %> </li>
+        <li class="divider"></li>
+        <li><%= link_to 'Edit', edit_user_registration_path %></li>
+        <li class="divider"></li>
+        <li><%= link_to 'Sign out', destroy_user_session_path , method: :delete %></li>
+    </ul>
 <% end %>
-
-		</section>
-	</nav>
-</div>
+</section>
+</nav>

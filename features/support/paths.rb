@@ -18,7 +18,8 @@ module NavigationHelpers
     when /^the Sign Out page$/ then '/users/sign_out'
     when /^the Sign Up page$/ then '/users/sign_up'
     when /^forgot password page$/ then '/users/password/new'
-    when /^the Profile View$/ then '/users/show'
+    when /^the Profile View$/ then '/users/1'
+    when /^the Users Page$/ then '/users'
 
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:

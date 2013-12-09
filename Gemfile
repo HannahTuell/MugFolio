@@ -1,12 +1,17 @@
-#Ashley's Edit with hello 
 
-source 'http://rubygems.org'
+source 'https://rubygems.org'
 
-#Veric Edit 
-gem 'rails', '3.1.0'
+gem 'rails', '3.2.13'
 
 # Bundle edge Rails instead:
-# gem 'rails',     :git => 'git://github.com/rails/rails.git'
+# gem 'rails', :git => 'git://github.com/rails/rails.git'
+
+gem 'devise'
+gem "socialization"
+gem "paperclip", "~> 3.0"
+gem 'public_activity'
+
+
 
 # for Heroku deployment - as described in Ap. A of ELLS book
 group :development, :test do
@@ -21,37 +26,24 @@ group :test do
   gem 'cucumber-rails'
   gem 'cucumber-rails-training-wheels'
 end
-group :production do
-#  gem 'pg'
-end
-
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
-  gem 'therubyracer'              
-  gem 'sass-rails', "  ~> 3.1.0"
-  gem 'coffee-rails', "~> 3.1.0"
-  gem 'uglifier'
+    gem 'sass-rails',   '~> 3.2.3'
+    gem 'coffee-rails', '~> 3.2.1'
+
+    # See https://github.com/sstephenson/execjs#readme for more supported runtimes
+    gem 'therubyracer'
+
+    gem 'zurb-foundation', '~> 4.0.0'
+    gem 'uglifier', '>= 1.0.3'
 end
 
+group :production do
+    gem 'pg'
+end
+group :development do
+    gem 'sqlite3'
+end
 gem 'jquery-rails'
-
-# Use unicorn as the web server
-# gem 'unicorn'
-
-# Deploy with Capistrano
-# gem 'capistrano'
-
-# To use debugger
-gem 'haml'
-
-gem 'compass'
-# To install foundation gem
-gem 'foundation-rails'
-
-# To install the Devise authentication gem
-gem 'devise'
-
-# To install the socialization gem for relationships b/n users
-gem 'socialization'
 
