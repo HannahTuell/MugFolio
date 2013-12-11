@@ -10,7 +10,7 @@ gem 'devise'
 gem "socialization"
 gem "paperclip", "~> 3.0"
 gem 'public_activity'
-
+gem 'simplecov', :require => false, :group => :test
 
 
 # for Heroku deployment - as described in Ap. A of ELLS book
