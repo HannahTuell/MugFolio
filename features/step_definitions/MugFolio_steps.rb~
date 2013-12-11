@@ -46,6 +46,10 @@ When /^I click on 'like'$/ do
   click_link("like")
 end
 
+When /^I click on 'unlike'$/ do
+  click_link("unlike")
+end
+
 When /^I click on 'Create Comment'$/ do
   click_button("Create Comment")
 end
@@ -97,6 +101,10 @@ end
 
 Then /^I should see 1 like$/ do
   page.should have_content "1 likes"
+end
+
+Then /^I should see 0 likes$/ do
+  page.should have_content "0 likes"
 end
 
 Then /^I should see 1 comment$/ do

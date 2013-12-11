@@ -12,8 +12,8 @@ Scenario: Add Friend
   Then I press "Sign up"
   Then I should be signed in
   Then I should see a successful sign up message
-  When I click on 'Users' 
-  Then I should be on the Users Page
+  When I click on 'Friends' 
+  Then I should be on the Friends Page
   And I should see testname
   #When I click on 'Add Friend'
   #Then I should see UnFriend  
@@ -30,8 +30,8 @@ Scenario: UnFriend
   Then I press "Sign up"
   Then I should be signed in
   Then I should see a successful sign up message
-  When I click on 'Users' 
-  Then I should be on the Users Page
+  When I click on 'Friends' 
+  Then I should be on the Friends Page
   And I should see testname
   #When I click on 'Add Friend'
   #Then I should see UnFriend  

@@ -1,3 +1,5 @@
+Feature: Friends
+
 Scenario: Add Friend
   Given I have an account
   And I am signed in 

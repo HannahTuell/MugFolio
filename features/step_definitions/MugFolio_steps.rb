@@ -54,8 +54,8 @@ When /^I click on 'Create Comment'$/ do
   click_button("Create Comment")
 end
 
-When /^I click on 'Users'$/ do
-  click_link("Users")
+When /^I click on 'Friends'$/ do
+  click_link("Friends")
 end
 
 When /^I click on 'Add Friend'$/ do

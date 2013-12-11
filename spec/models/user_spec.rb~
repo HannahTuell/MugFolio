@@ -45,7 +45,7 @@ describe User do
   it "should not accept email addresses that are idetical with upercase" do
     upcase_email = @attr[:email].upcase
     User.create!(@attr.merge(:email => upcase_email))
-    duplicate_email_upercase = User.new(@attr)
+    duplicate_email = User.new(@attr)
     duplicate_email_upercase.should_not be_valid
   end
 
