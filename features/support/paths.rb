@@ -20,6 +20,7 @@ module NavigationHelpers
     when /^forgot password page$/ then '/users/password/new'
     when /^the Profile View$/ then '/users/1'
     when /^the Friends Page$/ then '/users'
+    when /^click on 'like'$/ then '/shared/_like'
 
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
