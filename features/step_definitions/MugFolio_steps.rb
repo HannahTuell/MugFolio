@@ -33,25 +33,6 @@ end
 When(/^I sign out$/) do
 	click_link('Sign out')
 end
-
-#Refactor
-=begin
-When /^I click on 'like'$/ do
-  click_link("like")
-end
-
-When /^I click on 'unlike'$/ do
-  click_link("unlike")
-end
-
-When /^I click on 'Add Friend'$/ do
-  click_button("Add Friend")
-end
-
-When /^I click on 'UnFriend'$/ do
-  click_button("UnFriend")
-end
-=end
 #Then
 Then (/^I press 'Send me reset password instructions'$/) do
   click_button('Send me reset password instructions')
@@ -68,27 +49,4 @@ Then /^I should be signed out$/ do
   page.should have_content "Sign in"
   page.should_not have_content "Sign Out"
 end
-
-#Then /^(?:|I ) should see "([^"]*)"$/ do |message|
-#  page.should have_content "message"
-#end
-
-=begin
-Then /^I should see 1 like$/ do
-  page.should have_content "1 likes"
-end
-
-Then /^I should see 0 likes$/ do
-  page.should have_content "0 likes"
-end
-
-
-Then /^I should see UnFriend$/ do
-  page.should have_content "UnFriend"
-end
-
-Then /^I should see Add Friend$/ do
-  page.should have_content "Add Friend"
-end
-=end
 

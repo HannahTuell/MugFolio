@@ -15,8 +15,7 @@ Scenario: Add Friend
   When I click on link "Friends" 
   Then I should be on the Friends Page
   And I should see "Test Name 3"
-  When I click on button "Add Friend"
-  #Then I should see "UnFriend"  
+  When I click on button "Add Friend"  
   
 Scenario: UnFriend
   Given I have an account

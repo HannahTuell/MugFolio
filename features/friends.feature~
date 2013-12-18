@@ -35,5 +35,5 @@ Scenario: UnFriend
   And I should see "testname"
   When I click on button "Add Friend"
   #Then I should see UnFriend  
-  When I click on button "unfollow"
+  #When I click on button "unfollow"
   #Then I should see Add Friend
