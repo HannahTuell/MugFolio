@@ -1,0 +1,14 @@
+Features we did not accomplish that was apart of our proposal
+-Users cannot post on other users wall
+-Users cannot edit profile preference like Interests and Quotes
+-Users cannot clear their entire wall
+-Profile is viewable to all users
+-Search for friends is not available. Just a whole list of all users
+We left out these features because we felt they were less important and spent our time figuring out some extra features listed in the extra credit section. Upon completing these tasks, we ran out of time to add the features above.
+
+Features we implemented that were not apart of our proposal
+-Ability to comment on anything posted on the wall
+-Ability to post pictures to the newsfeed
+-Ability to add picture to profile
+-Ability to 'like' any post on the newsfeed and wall
+
