@@ -3,12 +3,15 @@ Features we did not accomplish that was apart of our proposal
 -Users cannot edit profile preference like Interests and Quotes
 -Users cannot clear their entire wall
 -Profile is viewable to all users
--Search for friends is not available. Just a whole list of all users
+-Search for friends is not available. Just a whole list of all users that can be viewed by clicking on the friends link in the top right corner.You can add friends and unfriend people by cliking the Add friends and unfriend buttons.
 We left out these features because we felt they were less important and spent our time figuring out some extra features listed in the extra credit section. Upon completing these tasks, we ran out of time to add the features above.
 
 Features we implemented that were not apart of our proposal
+-Ability to post to the newsfeed. (Anything the the user posts to the newsfeed or likes or comments on. Shows up on their own profile wall. Eg: if I like Verics post it will show up on my profile saying that I liked his post.)
 -Ability to comment on anything posted on the wall
 -Ability to post pictures to the newsfeed
--Ability to add picture to profile
--Ability to 'like' any post on the newsfeed and wall
+-Ability to add a profile picture
+-Ability to 'like'/'unlike' any post on the newsfeed and wall. (It also keeps track of the number of likes)
+-Ability to delete individual posts by going to /posts and clicking destroy next to the post you want to delete.
+-Ability to delete your account by cliking preferences and then clicking 'cancel my account' at the bottom of the page. 
 
